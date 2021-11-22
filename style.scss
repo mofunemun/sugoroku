@@ -1,3 +1,189 @@
+
+//共通部分
 body{
     width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.not-pc{
+    display: none;
+}
+.headline{
+    width: 80%;
+    margin: 0 auto;
+    border: solid 1px black;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    background-color: #FFCE2B;
+    padding: 2vh 1%;
+}
+.flex{
+    display: flex;
+}
+
+//インデックス
+.index-storeimg{
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+    padding-top: 4vh;
+    >img{
+        width: 100%;
+        object-fit: cover;
+    }
+}
+.index-button{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 4vh;
+    >a{
+        display: block;
+        width: 100%;
+        background-color: #4AA035;
+        padding: 2vh 0;
+        >p{
+            font-size: 28px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+    }
+}
+
+//ガチャ画面
+.game-binimg{
+    width: 100%;
+    >a{
+        display: block;
+        width: 100%;
+        height: auto;
+        >img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+//ガチャ結果
+.result-missimg{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 4vh;
+    >img{
+        width: 100%;
+        object-fit: cover;
+    }
+}
+.result-items{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 4vh;
+    .result-buttons{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        >a{
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 45%;
+            background-color: #4AA035;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            >p{
+                width: 100%;
+                position: absolute;
+                top:50%;
+                transform: translateY(-50%);
+                >span{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .result-binimg{
+        width: 50%;
+        >img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+//最終画面
+.caution{
+    border: solid #FD733F 3px;
+    background-color: white;
+}
+.cat{
+    padding-top: 5vh;
+    padding-bottom: 2vh;
+    width: 95%;
+    margin: 0 auto;
+    >.concl-catbalimg{
+        width: 50%;
+        >img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    >.concl-catimg{
+        width: 50%;
+        >img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.concl-canlineimg{
+    width: 100%;
+    display: flex;
+    padding-bottom: 2vh;
+    >img{
+        width: 20%;
+    }
+}
+.rabbit{
+    width: 95%;
+    >.concl-rabbitimg{
+        width: 50%;
+    }
+    >.concl-rabbitbalitems{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        >.concl-rabbitbalimg{
+            width: 100%;
+            height: 60%;
+            >img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        >.concl-box{
+            width: 100%;
+            height: 35%;
+            background-color: #4AA035;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 10px;
+            position: relative;
+            >p{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
 }
