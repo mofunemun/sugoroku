@@ -13,13 +13,20 @@ body {
 .headline {
   width: 80%;
   margin: 0 auto;
-  border: solid 1px black;
+  border: solid 5px orange;
   color: black;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 24px;
   text-align: center;
-  background-color: #FFCE2B;
+  background-color: white;
   padding: 2vh 1%;
+}
+.headline .red-bold {
+  color: red;
+  font-weight: bold;
+}
+.headline .small {
+  font-size: 20px;
 }
 
 .flex {
@@ -27,15 +34,27 @@ body {
 }
 
 .index-storeimg {
+  position: relative;
   width: 80%;
   margin: 0 auto;
   height: auto;
   padding-top: 4vh;
 }
-.index-storeimg > img {
+.index-storeimg .index-storeimg-store {
+  top: 0;
+  left: 0;
+  z-index: 1;
   width: 100%;
+  padding-bottom: 60px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.index-storeimg .index-storeimg-red {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  width: 50%;
 }
 
 .index-button {
@@ -44,9 +63,11 @@ body {
   padding-top: 4vh;
 }
 .index-button > a {
+  border-radius: 20px;
+  box-shadow: 5px 5px 6px gray;
   display: block;
   width: 100%;
-  background-color: #4AA035;
+  background-color: #ff4500;
   padding: 2vh 0;
 }
 .index-button > a > p {
@@ -55,9 +76,21 @@ body {
   text-align: center;
   font-weight: bold;
 }
+.index-button > a:active {
+  box-shadow: 0px 0px;
+}
+
+.game-wishimg {
+  width: 100%;
+  padding-bottom: 4vh;
+}
+.game-wishimg > img {
+  width: 100%;
+}
 
 .game-binimg {
   width: 100%;
+  padding-top: 4vh;
 }
 .game-binimg > a {
   display: block;
@@ -68,6 +101,13 @@ body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.result-failimg {
+  width: 100%;
+}
+.result-failimg > img {
+  width: 100%;
 }
 
 .result-missimg {
@@ -85,6 +125,7 @@ body {
   width: 80%;
   margin: 0 auto;
   padding-top: 4vh;
+  justify-content: space-between;
 }
 .result-items .result-buttons {
   width: 50%;
@@ -97,7 +138,9 @@ body {
   display: block;
   width: 100%;
   height: 45%;
-  background-color: #4AA035;
+  background-color: #6495ed;
+  border-radius: 10px;
+  box-shadow: 5px 5px 6px gray;
   color: white;
   font-size: 20px;
   font-weight: bold;
@@ -112,8 +155,11 @@ body {
 .result-items .result-buttons > a > p > span {
   font-size: 16px;
 }
+.result-items .result-buttons > a:active {
+  box-shadow: 0px 0px;
+}
 .result-items .result-binimg {
-  width: 50%;
+  width: 45%;
 }
 .result-items .result-binimg > img {
   width: 100%;
@@ -163,6 +209,9 @@ body {
 }
 .rabbit > .concl-rabbitimg {
   width: 50%;
+}
+.rabbit > .concl-rabbitimg > img {
+  width: 100%;
 }
 .rabbit > .concl-rabbitbalitems {
   width: 50%;
