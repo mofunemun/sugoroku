@@ -1,12 +1,19 @@
 body {
   width: 100%;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.not-pc {
+.pc-only {
   display: none;
 }
 
@@ -16,20 +23,24 @@ body {
   border: solid 5px orange;
   color: black;
   font-weight: bold;
-  font-size: 24px;
+  font-size: calc(1.5rem + ((1vw - 3.75px) * 5.6471) - 4px);
   text-align: center;
   background-color: white;
   padding: 2vh 1%;
 }
+
 .headline .red-bold {
   color: red;
   font-weight: bold;
 }
+
 .headline .small {
-  font-size: 20px;
+  font-size: calc(0.875rem + ((1vw - 3.75px) * 3.7647));
 }
 
 .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -40,6 +51,7 @@ body {
   height: auto;
   padding-top: 4vh;
 }
+
 .index-storeimg .index-storeimg-store {
   top: 0;
   left: 0;
@@ -49,6 +61,7 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
 .index-storeimg .index-storeimg-red {
   position: absolute;
   bottom: 0;
@@ -62,41 +75,54 @@ body {
   margin: 0 auto;
   padding-top: 4vh;
 }
+
 .index-button > a {
   border-radius: 20px;
-  box-shadow: 5px 5px 6px gray;
+  -webkit-box-shadow: 5px 5px 6px gray;
+          box-shadow: 5px 5px 6px gray;
   display: block;
   width: 100%;
   background-color: #ff4500;
   padding: 2vh 0;
 }
+
 .index-button > a > p {
-  font-size: 28px;
+  font-size: calc(0.875rem + ((1vw - 3.75px) * 3.7647));
   color: white;
   text-align: center;
   font-weight: bold;
 }
+
 .index-button > a:active {
-  box-shadow: 0px 0px;
+  -webkit-box-shadow: 0px 0px;
+          box-shadow: 0px 0px;
 }
 
 .game-wishimg {
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   padding-bottom: 4vh;
 }
+
 .game-wishimg > img {
+  height: 100%;
   width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .game-binimg {
-  width: 100%;
+  width: 60%;
+  margin: 0 auto;
   padding-top: 4vh;
 }
+
 .game-binimg > a {
   display: block;
   width: 100%;
   height: auto;
 }
+
 .game-binimg > a > img {
   width: 100%;
   -o-object-fit: cover;
@@ -104,17 +130,20 @@ body {
 }
 
 .result-failimg {
-  width: 100%;
+  width: 60%;
+  margin: 0 auto;
 }
+
 .result-failimg > img {
   width: 100%;
 }
 
 .result-missimg {
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
   padding-top: 4vh;
 }
+
 .result-missimg > img {
   width: 100%;
   -o-object-fit: cover;
@@ -125,14 +154,25 @@ body {
   width: 80%;
   margin: 0 auto;
   padding-top: 4vh;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 .result-items .result-buttons {
   width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 .result-items .result-buttons > a {
   position: relative;
   display: block;
@@ -140,27 +180,35 @@ body {
   height: 45%;
   background-color: #6495ed;
   border-radius: 10px;
-  box-shadow: 5px 5px 6px gray;
+  -webkit-box-shadow: 5px 5px 6px gray;
+          box-shadow: 5px 5px 6px gray;
   color: white;
-  font-size: 20px;
+  font-size: calc(0.875rem + ((1vw - 3.75px) * 3.7647));
   font-weight: bold;
   text-align: center;
 }
+
 .result-items .result-buttons > a > p {
   width: 100%;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
+
 .result-items .result-buttons > a > p > span {
-  font-size: 16px;
+  font-size: calc(0.875rem + ((1vw - 3.75px) * 3.7647) - 4px);
 }
+
 .result-items .result-buttons > a:active {
-  box-shadow: 0px 0px;
+  -webkit-box-shadow: 0px 0px;
+          box-shadow: 0px 0px;
 }
+
 .result-items .result-binimg {
-  width: 45%;
+  width: 30%;
 }
+
 .result-items .result-binimg > img {
   width: 100%;
   -o-object-fit: cover;
@@ -175,20 +223,24 @@ body {
 .cat {
   padding-top: 5vh;
   padding-bottom: 2vh;
-  width: 95%;
+  width: 70%;
   margin: 0 auto;
 }
+
 .cat > .concl-catbalimg {
   width: 50%;
 }
+
 .cat > .concl-catbalimg > img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
+
 .cat > .concl-catimg {
   width: 50%;
 }
+
 .cat > .concl-catimg > img {
   width: 100%;
   -o-object-fit: cover;
@@ -196,52 +248,84 @@ body {
 }
 
 .concl-canlineimg {
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-bottom: 2vh;
 }
+
 .concl-canlineimg > img {
   width: 20%;
 }
 
 .rabbit {
-  width: 95%;
+  width: 70%;
+  margin: 0 auto;
 }
+
 .rabbit > .concl-rabbitimg {
   width: 50%;
 }
+
 .rabbit > .concl-rabbitimg > img {
   width: 100%;
 }
+
 .rabbit > .concl-rabbitbalitems {
   width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .rabbit > .concl-rabbitbalitems > .concl-rabbitbalimg {
   width: 100%;
   height: 60%;
 }
+
 .rabbit > .concl-rabbitbalitems > .concl-rabbitbalimg > img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
+
 .rabbit > .concl-rabbitbalitems > .concl-box {
   width: 100%;
   height: 35%;
   background-color: #4AA035;
   color: white;
-  font-size: 20px;
   font-weight: bold;
   border-radius: 10px;
   position: relative;
 }
+
 .rabbit > .concl-rabbitbalitems > .concl-box > p {
+  font-size: calc(0.875rem + ((1vw - 3.75px) * 3.7647) - 4px);
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 100%;
   text-align: center;
-}/*# sourceMappingURL=style.css.map */
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    display: none;
+  }
+  .pc-only {
+    display: block;
+    text-align: center;
+    font-size: 28px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

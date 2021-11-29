@@ -9,36 +9,44 @@
     <title>あたりくじ -つかいすぎ</title>
 </head>
 <body>
-    <div class="headline caution">
-        <p>あなたは〇〇円<br>つかいました</p>
-    </div>
-    <div class="cat flex">
-        <div class="concl-catbalimg">
-            <img src="./img/cat-balloon.png" alt="">
+    <div class="pc-only"><p>このページはスマートフォン専用です。</p></div>
+    <div class="container">
+        <div class="headline caution">
+            <p>あなたは<span id="expence">0</span>円<br>つかいました</p>
         </div>
-        <div class="concl-catimg">
-            <img src="./img/green.png" alt="">
-        </div>
-    </div>
-    <div class="concl-canlineimg">
-        <img src="./img/candy1.png" alt="">
-        <img src="./img/candy1.png" alt="">
-        <img src="./img/candy1.png" alt="">
-        <img src="./img/candy1.png" alt="">
-        <img src="./img/candy1.png" alt="">
-    </div>
-    <div class="rabbit flex">
-        <div class="concl-rabbitimg">
-            <img src="./img/yellow.png" alt="">
-        </div>
-        <div class="concl-rabbitbalitems">
-            <div class="concl-rabbitbalimg">
-                <img src="./img/rabbit-balloon.png" alt="">
+        <div class="cat flex">
+            <div class="concl-catbalimg">
+                <img src="./img/cat-balloon.png" alt="">
             </div>
-            <div class="concl-box">
-                <p>すごろくにもどって<br>2すすむ</p>
+            <div class="concl-catimg">
+                <img src="./img/green.png" alt="">
+            </div>
+        </div>
+        <div class="concl-canlineimg">
+            <img src="./img/candy1.png" alt="">
+            <img src="./img/candy1.png" alt="">
+            <img src="./img/candy1.png" alt="">
+            <img src="./img/candy1.png" alt="">
+            <img src="./img/candy1.png" alt="">
+        </div>
+        <div class="rabbit flex">
+            <div class="concl-rabbitimg">
+                <img src="./img/yellow.png" alt="">
+            </div>
+            <div class="concl-rabbitbalitems">
+                <div class="concl-rabbitbalimg">
+                    <img src="./img/rabbit-balloon.png" alt="">
+                </div>
+                <div class="concl-box">
+                    <p>すごろくにもどって<br>2すすむ</p>
+                </div>
             </div>
         </div>
     </div>
 </body>
+<script lang="js">
+    'use strict';
+    let data = sessionStorage.getItem('total');
+    document.getElementById('expence').textContent = data;
+</script>
 </html>

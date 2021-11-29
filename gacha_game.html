@@ -9,19 +9,41 @@
     <title>あたりくじ -アメをえらんでね</title>
 </head>
 <body>
-    <div class="game-wishimg">
-        <img src="./img/wish.png" alt="">
-    </div>
-    <div class="headline">
-        <p>
-            <span class="red-bold">あたりつきアメがほしい！</span><br>
-            あたりが出たら<br>
-            おもちゃもらえる！<br>
-            <span class="small">むりょうでアメを</span><span class="red-bold">1こ</span><span class="small">えらぼう！</span>
-        </p>
-    </div>
-    <div class="game-binimg">
-        <a href="./gacha_result.html"><img src="./img/candys-trans.png" alt=""></a>
+    <div class="pc-only"><p>このページはスマートフォン専用です。</p></div>
+    <div class="container">
+        <div class="game-wishimg">
+            <img src="./img/wish.png" alt="">
+        </div>
+        <div class="headline">
+            <p>
+                <span class="red-bold">あたりつきアメがほしい！</span><br>
+                あたりが出たら<br>
+                おもちゃもらえる！<br>
+                <span class="small"><span id="price"></span>でアメを</span><span class="red-bold">1こ</span><span class="small">えらぼう！</span>
+            </p>
+        </div>
+        <div class="game-binimg">
+            <a href="./gacha_result.html" id="bin-btn"><img src="./img/candys-trans.png" alt=""></a>
+        </div>
     </div>
 </body>
+<script lang="js">
+    'use strict';
+    let data = sessionStorage.getItem('total');
+    console.log(data);
+    let totalNum = parseInt(data);
+    if ( totalNum === 0 ){
+        document.getElementById('price').textContent = "むりょう";
+    }else{
+        document.getElementById('price').textContent = "100えん";
+    }
+    const btn = document.getElementById('bin-btn');
+    
+    btn.addEventListener('click',() => {
+        totalNum = (totalNum + 100);
+        let totalStr = String(totalNum);
+        sessionStorage.setItem('total', totalStr);
+    })
+
+</script>
 </html>

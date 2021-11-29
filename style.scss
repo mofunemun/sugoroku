@@ -1,3 +1,8 @@
+$font-headline: calc(1.5rem + ((1vw - 3.75px) * 5.6471) - 4px);
+$font-normal: calc(0.875rem + ((1vw - 3.75px) * 3.7647));
+$font-small: calc(0.875rem + ((1vw - 3.75px) * 3.7647) - 4px);
+
+
 
 //共通部分
 body{
@@ -7,7 +12,7 @@ body{
     justify-content: center;
     flex-direction: column;
 }
-.not-pc{
+.pc-only{
     display: none;
 }
 .headline{
@@ -16,7 +21,7 @@ body{
     border: solid 5px orange;
     color: black;
     font-weight: bold;
-    font-size: 24px;
+    font-size: $font-headline;
     text-align: center;
     background-color: white;
     padding: 2vh 1%;
@@ -25,7 +30,7 @@ body{
         font-weight: bold;
     }
     .small{
-        font-size: 20px;
+        font-size: $font-normal
     }
 }
 .flex{
@@ -67,7 +72,7 @@ body{
         background-color: #ff4500;
         padding: 2vh 0;   
         >p{
-            font-size: 28px;
+            font-size: $font-normal;
             color: white;
             text-align: center;
             font-weight: bold;
@@ -80,14 +85,18 @@ body{
 
 //ガチャ画面
 .game-wishimg{
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     padding-bottom: 4vh;
     >img{
+        height: 100%;
         width: 100%;
+        object-fit: contain;
     }
 }
 .game-binimg{
-    width: 100%;
+    width: 60%;
+    margin: 0 auto;
     padding-top: 4vh;
     >a{
         display: block;
@@ -101,13 +110,14 @@ body{
 }
 //ガチャ結果
 .result-failimg{
-    width: 100%;
+    width: 60%;
+    margin: 0 auto;
     >img{
         width: 100%;
     }
 }
 .result-missimg{
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
     padding-top: 4vh;
     >img{
@@ -135,7 +145,7 @@ body{
             border-radius: 10px;
             box-shadow: 5px 5px 6px gray;
             color: white;
-            font-size: 20px;
+            font-size: $font-normal;
             font-weight: bold;
             text-align: center;
             >p{
@@ -144,7 +154,7 @@ body{
                 top:50%;
                 transform: translateY(-50%);
                 >span{
-                    font-size: 16px;
+                    font-size: $font-small
                 }
             }
         }
@@ -153,7 +163,7 @@ body{
           }
     }
     .result-binimg{
-        width: 45%;
+        width: 30%;
         >img{
             width: 100%;
             object-fit: cover;
@@ -169,7 +179,7 @@ body{
 .cat{
     padding-top: 5vh;
     padding-bottom: 2vh;
-    width: 95%;
+    width: 70%;
     margin: 0 auto;
     >.concl-catbalimg{
         width: 50%;
@@ -187,7 +197,9 @@ body{
     }
 }
 .concl-canlineimg{
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
+    object-fit: contain;
     display: flex;
     padding-bottom: 2vh;
     >img{
@@ -195,7 +207,8 @@ body{
     }
 }
 .rabbit{
-    width: 95%;
+    width: 70%;
+    margin: 0 auto;
     >.concl-rabbitimg{
         width: 50%;
         >img{
@@ -220,11 +233,11 @@ body{
             height: 35%;
             background-color: #4AA035;
             color: white;
-            font-size: 20px;
             font-weight: bold;
             border-radius: 10px;
             position: relative;
             >p{
+                font-size: $font-small;
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
@@ -232,5 +245,16 @@ body{
                 text-align: center;
             }
         }
+    }
+}
+
+@media screen and (min-width: 800px){
+    .container{
+        display: none;
+    }
+    .pc-only{
+        display: block;
+        text-align: center;
+        font-size: 28px
     }
 }
