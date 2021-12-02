@@ -19,16 +19,28 @@
             <img class="index-storeimg-red" src="./img/red.png" alt="">
         </div>
         <div class="index-button">
-            <a href="./gacha_game.html">
+            <a href="#" id="door">
                 <p>おみせにはいる</p>
             </a>
         </div>
     </div>
+    <audio id="doorSound" src="./door.mp3"></audio>
 </body>
 <script lang="js">
     'use strict';
     let totalNum = 0;
     let totalStr = String(totalNum);
     sessionStorage.setItem('total', totalStr);
+    const doorButton = document.getElementById('door');
+    const doorSound = document.getElementById('doorSound');
+    function sound(){
+        doorSound.play();
+        doorSound.addEventListener('ended',() =>{
+            window.location.href = './gacha_game.html';
+        })
+    }
+    doorButton.addEventListener('click',() => {
+        sound();
+    })
 </script>
 </html>

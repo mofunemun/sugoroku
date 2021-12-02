@@ -47,6 +47,8 @@
 <script lang="js">
     'use strict';
     let data = sessionStorage.getItem('total');
-    document.getElementById('expence').textContent = data;
+    console.log(data);
+    let totalExpence = 100 * (parseInt(data) - 1);
+    document.getElementById('expence').textContent = totalExpence;
 </script>
 </html>

@@ -23,9 +23,10 @@
             </p>
         </div>
         <div class="game-binimg">
-            <a href="./gacha_result.html" id="bin-btn"><img src="./img/candys-trans.png" alt=""></a>
+            <a href="#" id="bin-btn"><img src="./img/candys-trans.png" alt=""></a>
         </div>
     </div>
+    <audio src="./drum.mp3" id="gachaSound"></audio>
 </body>
 <script lang="js">
     'use strict';
@@ -38,11 +39,19 @@
         document.getElementById('price').textContent = "100えん";
     }
     const btn = document.getElementById('bin-btn');
-    
+    const gachaSound = document.getElementById('gachaSound');
+    function sound(){
+        gachaSound.play();
+        gachaSound.addEventListener('ended',() =>{
+            console.log("処理完了");
+            window.location.href = './gacha_result.html';
+        })
+    }
     btn.addEventListener('click',() => {
-        totalNum = (totalNum + 100);
+        totalNum++;
         let totalStr = String(totalNum);
         sessionStorage.setItem('total', totalStr);
+        sound();
     })
 
 </script>
